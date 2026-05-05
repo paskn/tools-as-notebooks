@@ -1,6 +1,6 @@
 {
-  "name": "Python & R Environment",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "Python & R Course Environment",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
   "features": {
     "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
       "version": "latest"
@@ -10,7 +10,7 @@
     "vscode": {
       "settings": {
         "r.rterm.linux": "/usr/local/bin/R",
-        "python.defaultInterpreterPath": "/opt/conda/bin/python"
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
       },
       "extensions": [
         "ms-python.python",
