@@ -1,0 +1,23 @@
+{
+  "name": "Python & R Environment",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/rocker-org/devcontainer-features/r-rig:1": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "r.rterm.linux": "/usr/local/bin/R",
+        "python.defaultInterpreterPath": "/opt/conda/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "REditorSupport.r"
+      ]
+    }
+  },
+  "postCreateCommand": "Rscript -e 'install.packages(c(\"renv\", \"languageserver\"), repos=\"https://cloud.r-project.org\")'"
+}
